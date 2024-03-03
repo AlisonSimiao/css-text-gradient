@@ -1,1 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --gray: rgba(0, 0, 0, 0.63);
+    --gray-drak: #111111;
+    --gray-component: #cecbcb;
+    --h: 3rem;
+    --rounded: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+header .title {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 900;
+    background: linear-gradient(90deg, #42d392, #647eff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header span {
+    font-size: .8rem;
+    text-align: center;
+    color: var(--gray);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Define duas colunas na grade */
+    grid-template-areas:
+    "result"
+    "tools";
+
+    row-gap: 1rem;
+}
+
+.tools {
+    grid-area: tools;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tool {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-transform: capitalize;
+}
+
+.tool-text input {
+    all: unset;
+    text-transform: none;
+    height: var(--h);
+    background-color: var(--gray-component);
+    padding-left: 1rem;
+    border-radius: .7rem;
+}
+
+.tool-angle .container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.tool-angle input {
+    width: 100%;
+}
+
+.button {
+    border: var(--gray-component) solid 1px;
+    border-radius: var(--rounded);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: var(--h);
+    height: var(--h);
+    color: var(--gray);
+}
+
+.tool-color .container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.screen-color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    background-color: var(--i);
+    width: 100%;
+    color: rgb(255, 255, 255);
+    border-radius: var(--rounded);
+}
+
+#add-color {
+    height: var(--h);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: x-large;
+    font-weight: 900;
+
+    border-radius: var(--rounded);
+
+    box-shadow: 2px 2px 2px 1px #02020250;
+}
+
+#add-color i {
+    font-size: xx-large;
+}
+
+.color {
+    height: var(--h);
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result #result-screen {
+   text-align: center;
+   font-size: xx-large;
+   font-weight: 900;
+   background-color: var(--gray-component);
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   padding-top: 1rem;
+   border-radius: var(--rounded);
+}
+
+.result #result-screen .container{
+    display: flex;
+    justify-content: space-between;
+ }
+
+.around-botton-left {
+    border-bottom-left-radius: 10px;
+}
+
+.around-botton-right {
+    border-bottom-right-radius: 10px;
+}
+
+ .result #result-screen .container button {
+    width: 50%;
+    height: var(--h);
+    background-color: var(--gray-drak);
+    border: none;
+    color: var(--gray-component);
+    text-transform: capitalize;
+ }
+
+footer {
+    text-align: center;
+ }

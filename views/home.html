@@ -3,19 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./../styles/home.css">
+    <script src="./../scripts/home.js" defer></script>
     <title>Css text generate</title>
 </head>
 <body>
     <header>
-        <h1>generate text gradiente</h1>
+        <span class="title">
+            generate text gradiente
+        </span>
         <span>
             Crie e incorpore textos gradientes deslumbrantes instantaneamente usando CSS ou HTML. 
-            <br> Simples, eficiente e perfeito para desenvolvedores que buscam aprimorar seus projetos.
+        </span>
+        <span> 
+            Simples, eficiente e perfeito para desenvolvedores que buscam aprimorar seus projetos.
         </span>
     </header>
     <main>
+        <div class='tools'>
+            <div class="tool tool-text">
+                <span>
+                    texto
+                </span> 
+                <input id='text' type="text" value="sample text"/>                
+            </div>
+            <div class='tool tool-angle'>
+                    <span>
+                        angulo
+                    </span>
+                    <div class="container">
+                        <input type="range" value="135" max="360" min="0"/> 
+                        <span class='button result'>135</span>
+                    </div>
+                    
+                    
+            </div>
+            <div class='tool tool-color'>
+                <span>cores</span>
+                <div class="container">
+                    
+                </div>
+                <div id="add-color">
+                    <i class="material-icons">add</i>
+                    <span>nova cor</span>
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            <div id="result-screen">
+                <span>sample text</span>
+                <div class="container">
+                    <button id="result-css" class="around-botton-left">
+                        copiar css
+                    </button>
+                    <button id="result-html" class="around-botton-right">
+                        copiar html
+                    </button>
+                </div>
+                
+            </div>
+            <div id="result-css">
 
+            </div>
+        </div>
     </main>
     <footer>
         made by <strong>alison simião</strong>
