@@ -1,6 +1,16 @@
 [build]
   publish = "views"
 
+[[redirects]]       # Redirecionamento para solicitações de arquivos CSS
+  from = "/styles/*"
+  to = "/styles/:splat"
+  status = 200
+
+[[redirects]]       # Redirecionamento para solicitações de arquivos JavaScript
+  from = "/scripts/*"
+  to = "/scripts/:splat"
+  status = 200
+  
 [[redirects]]
   from = "/*"
   to = "/home.html"
