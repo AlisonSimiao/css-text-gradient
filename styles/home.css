@@ -68,6 +68,9 @@ main {
     flex-direction: column;
     gap: 1rem;
     text-transform: capitalize;
+    font-weight: 900;
+    font-size: larger;
+    color: #0f0e0ee1;
 }
 
 .tool-text input {
@@ -115,6 +118,7 @@ main {
     width: 100%;
     color: rgb(255, 255, 255);
     border-radius: var(--rounded);
+    position: relative;
 }
 
 #add-color {
@@ -135,11 +139,23 @@ main {
     font-size: xx-large;
 }
 
+#select-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(20%);
+}
+
 .color {
     height: var(--h);
     gap: 1rem;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    cursor: pointer;
 }
 
 .result #result-screen {
